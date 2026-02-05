@@ -56,7 +56,7 @@ async def run_recommendation_process(request: ProcessRequest) -> None:
             result_df.to_parquet(result_path, index=False)
 
             today = datetime.utcnow().strftime("%Y/%m/%d")
-            result_key = f"results/{today}/recommendations.parquet"
+            result_key = f"results/{today}/{batch_id}/recommendations.parquet"
             storage.upload_file(result_path, result_key)
 
         # 5. 성공 콜백
