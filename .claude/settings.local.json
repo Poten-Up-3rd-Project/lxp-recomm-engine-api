@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/generate_mock.py:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(pip install:*)",
+      "Bash(python scripts/generate_large_mock.py:*)",
+      "Bash(python -m uvicorn:*)",
+      "Bash(timeout:*)",
+      "Bash(curl:*)",
+      "Bash(python -m json.tool:*)",
+      "Bash(python:*)",
+      "Bash(docker build:*)",
+      "Bash(docker compose:*)"
+    ]
+  }
+}
